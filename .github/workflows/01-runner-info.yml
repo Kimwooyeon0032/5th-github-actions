@@ -1,5 +1,4 @@
 name: Runner Information
-run-name: "시간 확인 - ${{github.actor}}"
 on:
   workflow_dispatch
 
