@@ -21,7 +21,7 @@ jobs:
 
       - name: Step 레벨로 BUILD_ENV 덮어쓰기
         env:
-          LEVEL: "development"
+          BUILD_ENV: "development"
         run: |
           echo "App: $APP_NAME"
           echo "Version: $VERSION"
