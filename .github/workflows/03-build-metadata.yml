@@ -11,7 +11,7 @@ jobs:
         run: |
           SHORT_SHA=$(echo "${{ github.sha }}" | cut -c1-7)
           echo "short_sha=$SHORT_SHA" >> $GITHUB_OUTPUT
-          echo "build_id: build-{run_number}-{short_sha}" >> $GITHUB_OUTPUT
+          echo "build_id: build-${{ github.run_number }}-$SHORT_SHA" >> $GITHUB_OUTPUT
           ACTOR_UPPER=$(echo "${{ github.actor }}" | tr 'a-z' 'A-Z')
           echo "actor_upper=$ACTOR_UPPER" >> $GITHUB_OUTPUT
           echo "timestamp: $(date +%s)" >> $GITHUB_OUTPUT
