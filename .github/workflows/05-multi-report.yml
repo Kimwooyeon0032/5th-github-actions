@@ -17,6 +17,7 @@ jobs:
         with:
           name: unit-report-${{ github.run_number }}
           path: reports/unit/
+          retention-days: 3
 
   integration-test:
     runs-on: ubuntu-latest
@@ -32,6 +33,7 @@ jobs:
         with:
           name: integration-report-${{ github.run_number }}
           path: reports/integration/
+          retention-days: 3
 
   summary:
     needs:  [unit-test, integration-test]
